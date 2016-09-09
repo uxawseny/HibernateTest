@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--mysql驱动-->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <!--数据库地址-->
+        <property name="connection.url">jdbc:mysql://localhost:3306/hibernatetest</property>
+        <!--mysql方言-->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!--连接身份-->
+        <property name="connection.username">root</property>
+        <property name="hibernate.connection.password">123</property>
+
+        <!--推荐的三个配置-->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hbm2ddl.auto">create</property>
+        <!--StudntEntity对象映射-->
+        <mapping resource="entity/StudentEntity.hbm.xml"/>
+        <mapping class="entity.StudentEntity"/>
+    </session-factory>
+</hibernate-configuration>

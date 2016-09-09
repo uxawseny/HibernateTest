@@ -1,0 +1,36 @@
+<dataSource name="MySQL - hibernatetest@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="hibernatetest">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="exam" />
+    <schema id="3" name="hibernatedemo" />
+    <schema id="4" name="information_schema" />
+    <schema id="5" name="logindemo" />
+    <schema id="6" name="mydb" />
+    <schema id="7" name="mysite" />
+    <schema id="8" name="myspringmvc" />
+    <schema id="9" name="mysql" />
+    <schema id="10" name="performance_schema" />
+    <schema id="11" name="shop" />
+    <schema id="12" name="stu" />
+    <schema id="13" name="test" />
+    <schema id="14" name="t_monitor" />
+    <table id="15" parent="1" name="student" />
+    <column id="16" parent="15" name="sid">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="17" parent="15" name="sname">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="18" parent="15" name="sgender">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="19" parent="15" name="PRIMARY">
+      <columns>sid</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
